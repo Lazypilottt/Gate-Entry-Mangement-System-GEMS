@@ -8,7 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
+            background-color: #544A7F;
+            color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -28,7 +29,7 @@
         h1 {
             font-size: 24px;
             font-weight: bold;
-            color: #4CAF50;
+            color: white; /* Heading color white */
             margin: 20px 0;
             text-align: center;
         }
@@ -55,13 +56,17 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            background-color: white; /* Main container color white */
+            border-radius: 10px;
+            color: black; /* Main container text color black */
         }
         section {
-            background: white;
+            background: #544A7F; /* Container background to match */
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
+            color: white;
         }
         h2 {
             color: #4CAF50;
@@ -72,16 +77,17 @@
         }
         a {
             text-decoration: none;
-            color: #4CAF50;
+            color: #544A7F; /* Button text color purple */
             font-weight: bold;
             display: inline-block;
             margin-top: 10px;
-            background-color: #e0f7e9;
+            background-color: white; /* Button color white */
             padding: 10px 20px;
             border-radius: 5px;
+            border: 2px solid #544A7F; /* Border to match the button text color */
         }
         a:hover {
-            text-decoration: underline;
+            background-color: #e0f7e9;
         }
         footer {
             width: 100%;
@@ -89,6 +95,7 @@
             padding: 10px 0;
             background-color: #fff;
             box-shadow: 0 -4px 2px -2px gray;
+            color: black;
         }
         footer p {
             margin: 0;
@@ -127,4 +134,19 @@
         <section id="visitors">
             <h2>Visitors</h2>
             <p>10 visitors in campus</p>
-            <a href="visitors
+            <a href="visitors.html">Click here to see</a>
+        </section>
+
+        <section id="supportGroups">
+            <h2>Private Support Groups</h2>
+            <p>20 private support group members in campus</p>
+            <a href="supportGroups.html">Click here to see</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aditya Jha, Aditya Yadav, Agastya Nath</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
