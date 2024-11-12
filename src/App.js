@@ -4,7 +4,7 @@ import './App.css';
 class GateEntryManagementSystem extends React.Component {
   render() {
       return (
-        <center>
+        <>
           <div className="container">
               <header className="header">
                   <h1>Gate Entry Management System - GEMS</h1>
@@ -56,9 +56,10 @@ class GateEntryManagementSystem extends React.Component {
                   </tbody>
               </table>
           </div>
-          </center>
+          </>
       );
   }
+  
 }
 export default GateEntryManagementSystem;
 
