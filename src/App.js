@@ -4,7 +4,7 @@ import './App.css';
 class GateEntryManagementSystem extends React.Component {
   render() {
       return (
-        <>
+        <>¸
           <div className="container">
               <header className="header">
                   <h1>Gate Entry Management System - GEMS</h1>
