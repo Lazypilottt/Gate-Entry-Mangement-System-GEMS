@@ -1,5 +1,6 @@
 import React from "react";
-import "./App.css"; // CSS styles moved to a separate file
+import { Link } from "react-router-dom"; 
+import "./App.css"; 
 
 function App() {
   return (
@@ -8,10 +9,10 @@ function App() {
         <img src="logo.jpeg" alt="Logo" style={{ height: "50px" }} />
         <nav>
           <ul style={navStyle}>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="entry.html">Entry/Exit</a></li>
-            <li><a href="logout.html">Log Out</a></li>
+            <li><Link to="/" style={linkStyle}>Home</Link></li>
+            <li><Link to="/Profiles" style={linkStyle}>Profile</Link></li>
+            <li><Link to="/Entry/Exit" style={linkStyle}>Entry/Exit</Link></li>
+            <li><Link to="/logout" style={linkStyle}>Log Out</Link></li>
           </ul>
         </nav>
       </header>
@@ -21,14 +22,14 @@ function App() {
       </h1>
 
       <main style={mainStyle}>
-        <Section id="students" title="Students" description="40 students outside" link="students.html" />
-        <Section id="faculty" title="Faculty" description="50 faculty members logged" link="faculty.html" />
-        <Section id="visitors" title="Visitors" description="10 visitors in campus" link="visitors.html" />
+        <Section id="students" title="Students" description="40 students outside" link="/students" />
+        <Section id="faculty" title="Faculty" description="50 faculty members logged" link="/faculty" />
+        <Section id="visitors" title="Visitors" description="10 visitors in campus" link="/visitors" />
         <Section
           id="supportGroups"
           title="Private Support Groups"
           description="20 private support group members in campus"
-          link="supportGroups.html"
+          link="/supportGroups"
         />
       </main>
 
@@ -43,9 +44,9 @@ const Section = ({ id, title, description, link }) => (
   <section id={id} style={sectionStyle}>
     <h2 style={{ color: "#4CAF50" }}>{title}</h2>
     <p style={{ fontSize: "18px" }}>{description}</p>
-    <a href={link} style={buttonStyle}>
+    <Link to={link} style={buttonStyle}>
       Click here to see
-    </a>
+    </Link>
   </section>
 );
 
@@ -63,6 +64,12 @@ const navStyle = {
   padding: 0,
   display: "flex",
   gap: "20px",
+};
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "black",
+  fontWeight: "bold",
 };
 
 const mainStyle = {

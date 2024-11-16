@@ -1,9 +1,13 @@
-
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
 
 .container {
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
 }
 
 .header {
@@ -15,53 +19,14 @@
   display: flex;
   justify-content: space-around;
   background-color: #0073e6;
-  color: white;
   padding: 10px 0;
 }
 
-.navbar span {
-  cursor: pointer;
+.navbar a {
+  color: white;
+  text-decoration: none;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #f4f4f4;
+.navbar a:hover {
+  text-decoration: underline;
 }
-
-.logo {
-  width: 15%;
-  height: 15%;
-  margin-right: 10px;
-}
-
-
-.filter-section {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
-.filter-section label {
-  display: flex;
-  flex-direction: column;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.table th, .table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-.table th {
-  background-color: #f2f2f2;
-}
-
-

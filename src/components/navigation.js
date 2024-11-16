@@ -30,10 +30,6 @@ function Navigation() {
     <>
       <nav className="navigation">
         <div className="navigation-container">
-          <Link to="/" className="navigation-logo" onClick={closeMobileMenu}>
-            GEMS
-            <i className="fab fa-typo3" />
-          </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
