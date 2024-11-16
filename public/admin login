@@ -73,7 +73,7 @@
 </head>
 <body>
     <header>
-        <img src="gems.png" alt="GEMS Logo" id="logo">
+        <img src="logo.jpeg" alt="GEMS Logo" id="logo">
         <h1>College Gate Management System</h1>
     </header>
     <div class="login-container">
