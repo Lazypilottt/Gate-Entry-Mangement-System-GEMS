@@ -1,4 +1,9 @@
 {
+  "homepage": "https://lazypilottt.github.io/Gate-Entry-Mangement-System-GEMS/",
+  "scripts":{
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    },   
   "name": "csp203-proj",
   "version": "0.1.0",
   "private": true,
@@ -35,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }
