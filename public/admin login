@@ -11,7 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #544A7F;
+            background-color: #544A7F; /* Background color */
             margin: 0;
             color: white;
         }
@@ -26,7 +26,7 @@
         }
         .login-container h2 {
             margin-bottom: 20px;
-            color: #4CAF50;
+            color: #544A7F; /* Updated to background color */
         }
         .login-container input[type="text"],
         .login-container input[type="password"] {
@@ -36,9 +36,10 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            color: black; /* Text color for input fields */
         }
         .login-container input[type="submit"] {
-            background-color: #4CAF50;
+            background-color: #544A7F; /* Button color matching background */
             color: white;
             padding: 10px;
             border: none;
@@ -47,10 +48,10 @@
             width: 100%;
         }
         .login-container input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #3b3b6d; /* Darker shade for hover */
         }
         .login-container a {
-            color: #4CAF50;
+            color: #544A7F; /* Updated to background color */
             display: block;
             margin-top: 10px;
             text-decoration: none;
@@ -72,7 +73,7 @@
 </head>
 <body>
     <header>
-        <img src="iiit_bhilai_logo.png" alt="IIIT Bhilai Logo" id="logo">
+        <img src="gems.png" alt="GEMS Logo" id="logo">
         <h1>College Gate Management System</h1>
     </header>
     <div class="login-container">
