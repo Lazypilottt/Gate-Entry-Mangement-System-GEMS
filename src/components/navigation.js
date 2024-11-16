@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './navigation.css';
 
-function navigation() {
+function Navigation() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -20,61 +19,50 @@ function navigation() {
 
   useEffect(() => {
     showButton();
-  }, []);
+    window.addEventListener('resize', showButton);
 
-  window.addEventListener('resize', showButton);
+    return () => {
+      window.removeEventListener('resize', showButton);
+    };
+  }, []);
 
   return (
     <>
-      <nav className='navigation'>
-        <div className='navigation-container'>
-          <Link to='/' className='navigation-logo' onClick={closeMobileMenu}>
+      <nav className="navigation">
+        <div className="navigation-container">
+          <Link to="/" className="navigation-logo" onClick={closeMobileMenu}>
             GEMS
-            <i class='fab fa-typo3' />
+            <i className="fab fa-typo3" />
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
+          <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link
-                to='/Status'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Status
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/Entry/Exit'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
+            <li className="nav-item">
+              <Link to="/entry-exit" className="nav-links" onClick={closeMobileMenu}>
                 Entry/Exit
               </Link>
             </li>
-
-            <li>
-              <Link
-                to='/Profiles'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Profiles
+            <li className="nav-item">
+              <Link to="/components/pages/profiles" className="nav-links" onClick={closeMobileMenu}>
+                Profile
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/components/pages/logout" className="nav-links" onClick={closeMobileMenu}>
+                Log Out
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>Log Out</Button>}
         </div>
       </nav>
     </>
   );
 }
 
-export default navigation;
+export default Navigation;
