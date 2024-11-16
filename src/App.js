@@ -16,7 +16,6 @@ function App() {
                     <h1>Gate Entry Management System</h1>
                 </header>
             </div>
-
             <Navigation />
             <Routes>
                 <Route path="/" element={<Home />} />

@@ -4,24 +4,10 @@ import "./App.css";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "#544A7F", color: "white", fontFamily: "Arial, sans-serif" }}>
-      <header style={headerStyle}>
-        <img src="logo.jpeg" alt="Logo" style={{ height: "50px" }} />
-        <nav>
-          <ul style={navStyle}>
-            <li><Link to="/" style={linkStyle}>Home</Link></li>
-            <li><Link to="/Profiles" style={linkStyle}>Profile</Link></li>
-            <li><Link to="/Entry/Exit" style={linkStyle}>Entry/Exit</Link></li>
-            <li><Link to="/logout" style={linkStyle}>Log Out</Link></li>
-          </ul>
-        </nav>
-      </header>
-
-      <h1 style={{ textAlign: "center", fontSize: "24px", margin: "20px 0" }}>
-        College Gate Management System
-      </h1>
-
-      <main style={mainStyle}>
+    <div style={{color: "white", fontFamily: "Arial, sans-serif" }}>   
+    <br></br>
+    <div class = 'container'>
+    <main style={mainStyle}>
         <Section id="students" title="Students" description="40 students outside" link="/students" />
         <Section id="faculty" title="Faculty" description="50 faculty members logged" link="/faculty" />
         <Section id="visitors" title="Visitors" description="10 visitors in campus" link="/visitors" />
@@ -31,11 +17,13 @@ function App() {
           description="20 private support group members in campus"
           link="/supportGroups"
         />
+        
       </main>
-
+      <br></br>
       <footer style={footerStyle}>
         <p>&copy; 2024 Aditya Jha, Aditya Yadav, Agastya Nath</p>
       </footer>
+    </div>
     </div>
   );
 }
