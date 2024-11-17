@@ -7,6 +7,13 @@ import EntryExit from './components/pages/entry-exit';
 import Profile from './components/pages/profiles';
 import Logout from './components/pages/logout';
 import './App.css';
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode', darkModeToggle.checked);
+});
+
 function App() {
     return (
         <Router>

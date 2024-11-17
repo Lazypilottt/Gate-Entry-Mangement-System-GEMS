@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom"; 
 import "./App.css"; 
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div style={{color: "white", fontFamily: "Arial, sans-serif" }}>   
-    <br></br>
-    <div class = 'container'>
-    <main style={mainStyle}>
-        <Section id="students" title="Students" description="40 students outside" link="/students" />
-        <Section id="faculty" title="Faculty" description="50 faculty members logged" link="/faculty" />
-        <Section id="visitors" title="Visitors" description="10 visitors in campus" link="/visitors" />
-        <Section
-          id="supportGroups"
-          title="Private Support Groups"
-          description="20 private support group members in campus"
-          link="/supportGroups"
-        />
-        
-      </main>
-      <br></br>
-      <footer style={footerStyle}>
-        <p>&copy; 2024 Aditya Jha, Aditya Yadav, Agastya Nath</p>
-      </footer>
-    </div>
+    
+    <div className={darkMode ? "dark-mode" : ""} style={{fontFamily: "Arial, sans-serif" }}>
+      <div className="container">
+        <main style={darkMode ? mainDarkStyle : mainStyle}>
+          <Section id="students" title="Students" description="40 students outside" link="/students" />
+          <Section id="faculty" title="Faculty" description="50 faculty members logged" link="/faculty" />
+          <Section id="visitors" title="Visitors" description="10 visitors in campus" link="/visitors" />
+          <Section
+            id="supportGroups"
+            title="Private Support Groups"
+            description="20 private support group members in campus"
+            link="/supportGroups"
+          />
+        </main><br></br>
+        <footer style={footerStyle}>
+          <p>&copy; 2024 Aditya Jha, Aditya Yadav, Agastya Nath</p>
+        </footer>
+      </div>
+
+      {/* Dark Mode Toggle Button */}
+      <div className="dark-mode-toggle" onClick={toggleDarkMode}>
+        <div className={`toggle-slider ${darkMode ? 'active' : ''}`}></div>
+      </div>
     </div>
   );
 }
@@ -38,28 +47,6 @@ const Section = ({ id, title, description, link }) => (
   </section>
 );
 
-const headerStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: "10px 20px",
-  backgroundColor: "#fff",
-  boxShadow: "0 4px 2px -2px gray",
-};
-
-const navStyle = {
-  listStyle: "none",
-  padding: 0,
-  display: "flex",
-  gap: "20px",
-};
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "black",
-  fontWeight: "bold",
-};
-
 const mainStyle = {
   width: "80%",
   maxWidth: "1200px",
@@ -71,6 +58,19 @@ const mainStyle = {
   backgroundColor: "white",
   borderRadius: "10px",
   color: "black",
+};
+
+const mainDarkStyle = {
+  width: "80%",
+  maxWidth: "1200px",
+  margin: "0 auto",
+  padding: "20px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "20px",
+  backgroundColor: "#333",
+  borderRadius: "10px",
+  color: "white",
 };
 
 const sectionStyle = {
