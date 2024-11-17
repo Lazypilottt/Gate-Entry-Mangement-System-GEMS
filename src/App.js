@@ -6,6 +6,7 @@ import Home from './components/pages/home';
 import EntryExit from './components/pages/entry-exit';
 import Profile from './components/pages/profiles';
 import Logout from './components/pages/logout';
+import AdminLogin from './components/pages/admin-login';
 import './App.css';
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/entry-exit" element={<EntryExit />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/logout" element={<Logout />} />
+                <Route path="/admin-login" element={<AdminLogin />} />
             </Routes>
         </Router>
     );

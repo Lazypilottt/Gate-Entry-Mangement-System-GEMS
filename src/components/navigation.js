@@ -45,13 +45,13 @@ function Navigation() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/components/pages/profiles" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/profiles" className="nav-links" onClick={closeMobileMenu}>
                 Profile
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/components/pages/logout" className="nav-links" onClick={closeMobileMenu}>
-                Log Out
+              <Link to="/logout" className="nav-links" onClick={closeMobileMenu}>
+                Logout
               </Link>
             </li>
           </ul>

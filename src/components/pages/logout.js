@@ -1,85 +1,77 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function LogoutPage() {
-  const handleRedirect = () => {
-    // Redirect to the login page when the button is clicked
-    window.location.href = '/login'; // Update with your actual login path
-  };
+function Logout() {
+    const navigate = useNavigate();
 
-  return (
-    <div style={styles.container}>
-      <header style={styles.header}>
-        <img src="iit_bhilai_logo.png" alt="IIT Bhilai Logo" style={styles.logo} />
-      </header>
+    const handleLogout = () => {
+        const confirmLogout = window.confirm("Are you sure you want to log out?");
+        
+        if (confirmLogout) {
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('user');
+            setTimeout(() => {
+                navigate('/admin-login');
+            }, 5000);
+        } else {
+            alert("Logout cancelled.");
+            navigate('/');
+        }
+    };
 
-      <main style={styles.main}>
-        <h1 style={styles.title}>You've been logged out</h1>
-        <button onClick={handleRedirect} style={styles.button}>
-          Click here to log in again
-        </button>
-      </main>
+    useEffect(() => {
+        handleLogout();
+    }, []);
 
-      <footer style={styles.footer}>
-        <p>&copy; 2024 Aditya Jha, Aditya Yadav, Agastya Nath</p>
-      </footer>
-    </div>
-  );
+    const containerStyles = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        paddingTop: '30px',
+        height: '100vh',
+        backgroundColor: '#f4f4f9',
+        animation: 'fadeIn 1.5s ease-in-out',
+        position: 'relative',
+    };
+
+    const messageContainerStyles = {
+        textAlign: 'center',
+        padding: '20px',
+        backgroundColor: '#fff',
+        borderRadius: '10px',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+        transform: 'translateY(20px)',
+        animation: 'slideUp 1s ease-out',
+        position: 'absolute',
+        top: '20%',
+        left: '50%',
+        transform: 'translateX(-50%)',
+    };
+
+    const logoutMessageStyles = {
+        fontSize: '2rem',
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: '15px',
+        opacity: 0,
+        animation: 'fadeInUp 1.5s ease-in-out forwards',
+    };
+
+    const redirectMessageStyles = {
+        fontSize: '1.1rem',
+        color: '#666',
+        opacity: 0,
+        animation: 'fadeInUp 1.5s ease-in-out 0.5s forwards',
+    };
+
+    return (
+        <div style={containerStyles}>
+            <div style={messageContainerStyles}>
+                <h2 style={logoutMessageStyles}>Logging out...</h2>
+                <p style={redirectMessageStyles}>You will be redirected to the admin login page shortly.</p>
+            </div>
+        </div>
+    );
 }
 
-// Inline styles (similar to your original CSS)
-const styles = {
-  container: {
-    fontFamily: 'Arial, sans-serif',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: '100vh',
-    margin: 0,
-    backgroundColor: '#f4f4f4',
-  },
-  header: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'flex-end',
-    padding: '10px 20px',
-    backgroundColor: '#fff',
-    boxShadow: '0 4px 2px -2px gray',
-  },
-  logo: {
-    height: '50px',
-  },
-  main: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-  },
-  title: {
-    color: '#4CAF50',
-    marginBottom: '20px',
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: '16px',
-    color: 'white',
-    backgroundColor: '#4CAF50',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
-  buttonHover: {
-    backgroundColor: '#45a049',
-  },
-  footer: {
-    width: '100%',
-    textAlign: 'center',
-    padding: '10px 0',
-    backgroundColor: '#fff',
-    boxShadow: '0 -4px 2px -2px gray',
-  },
-};
-
-export default LogoutPage;
+export default Logout;

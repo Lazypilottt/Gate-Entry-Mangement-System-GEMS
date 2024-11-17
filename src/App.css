@@ -1,44 +1,41 @@
-/* Global styles */
 body {
   font-family: "Arial", sans-serif;
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
   color: #fff;
 }
 
 body.dark-mode .container {
-  background-color: #1f1f1f; /* Dark background for container */
+  background-color: #1f1f1f;
 }
 
 body.dark-mode .header {
-  background-color: #333; /* Darker header */
+  background-color: #333;
 }
 
 body.dark-mode .table th, body.dark-mode .table td {
-  background-color: #333; /* Darker table background */
-  color: #fff; /* Light text for table */
+  background-color: #333;
+  color: #fff;
 }
 
 body.dark-mode button {
-  background-color: #444; /* Dark buttons */
+  background-color: #444;
   color: #fff;
 }
 
 body.dark-mode select, body.dark-mode input[type="text"], body.dark-mode input[type="datetime-local"] {
-  background-color: #333; /* Dark input fields */
+  background-color: #333;
   color: #fff;
-  border-color: #6b5ca8; /* Purple border for input fields */
+  border-color: #6b5ca8;
 }
 
 body.dark-mode option {
-  background-color: #333; /* Dark options */
-  color: #fff; /* Light text in options */
+  background-color: #333;
+  color: #fff;
 }
 
-/* Floating dark mode toggle button */
 .dark-mode-toggle {
   position: fixed;
   bottom: 20px;
@@ -75,7 +72,6 @@ body.dark-mode option {
   transition: transform 0.3s ease;
 }
 
-/* When the checkbox is checked */
 .dark-mode-checkbox:checked + .slider {
   background-color: #6b5ca8;
 }
@@ -84,7 +80,6 @@ body.dark-mode option {
   transform: translateX(25px);
 }
 
-/* Container and UI elements */
 .container {
   width: 80%;
   margin: 0 auto;
@@ -103,6 +98,15 @@ body.dark-mode option {
   width: 15%;
   height: 15%;
   margin-right: 10px;
+}
+
+.admin-login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }
 
 .filter-section {
@@ -253,4 +257,176 @@ body.dark-mode select, body.dark-mode input[type="text"], body.dark-mode input[t
 body.dark-mode option {
   background-color: #333;
   color: #fff;
+}
+
+.profile-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-container input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 300px;
+}
+
+.profile-details {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.profile-details p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.error {
+  color: red;
+}
+
+
+/*admin login*/
+/* Admin Login Styles */
+.admin-login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.admin-login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-login-container label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.admin-login-container input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.admin-login-container input:focus {
+  border-color: #544A7F;
+  box-shadow: 0 0 5px rgba(107, 92, 168, 0.5);
+}
+
+.admin-login-container button {
+  padding: 10px;
+  background-color: #544A7F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-login-container button:hover {
+  background-color: #6b5ca8;
+  transform: translateY(-2px);
+}
+
+.admin-login-container button:active {
+  background-color: #463666;
+  transform: translateY(2px);
+}
+
+.admin-login-container p {
+  text-align: center;
+  font-size: 14px;
+  color: red;
+  margin-top: 15px;
+}
+
+
+/*logout page*/
+/* Logout Page Styles */
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.message-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  animation: slideUp 1s ease-out;
+}
+
+.logout-message {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.redirect-message {
+  font-size: 1.1rem;
+  color: #666;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out 0.5s forwards; /* Delay to appear after the main message */
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
