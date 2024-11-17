@@ -1,8 +1,5 @@
-
-
 .container {
   width: 80%;
-  /*background-color: #544A7F;*/
   margin: 0 auto;
   font-family: Arial, sans-serif;
 }
@@ -12,10 +9,14 @@
   margin: 20px 0;
 }
 
-
 .navbar span {
   cursor: pointer;
 }
+
+.entry-exit-container {
+  margin-top: 1%;
+}
+
 
 .header {
   display: flex;
@@ -30,16 +31,25 @@
   margin-right: 10px;
 }
 
-
 .filter-section {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .filter-section label {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  width: 200px; /* Ensures labels don't stretch too far */
+}
+
+.filter-section label span {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
 }
 
 .table {
@@ -58,4 +68,95 @@
   background-color: #f2f2f2;
 }
 
+button {
+  background-color: #544A7F;
+  color: #fff;
+  padding: 0px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
 
+button:hover {
+  background-color: #6b5ca8;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #463666;
+  transform: translateY(2px);
+}
+
+select {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 2px solid #544A7F;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select:focus {
+  outline: none;
+  border-color: #6b5ca8;
+  box-shadow: 0 0 5px rgba(107, 92, 168, 0.5);
+}
+
+select:hover {
+  background-color: #f4f4f4;
+}
+
+option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+option:hover {
+  background-color: #e2e2e2;
+}
+
+input[type="text"], input[type="datetime-local"], select {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 2px solid #544A7F;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="datetime-local"]:focus, select:focus {
+  outline: none;
+  border-color: #6b5ca8;
+  box-shadow: 0 0 5px rgba(107, 92, 168, 0.5);
+}
+
+input[type="text"]:hover, input[type="datetime-local"]:hover, select:hover {
+  background-color: #f4f4f4;
+}
+
+option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+option:hover {
+  background-color: #e2e2e2;
+}
+
+input[type="datetime-local"] {
+  cursor: pointer;
+}

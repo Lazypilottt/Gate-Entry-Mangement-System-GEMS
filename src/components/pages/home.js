@@ -30,7 +30,7 @@ function App() {
 
 const Section = ({ id, title, description, link }) => (
   <section id={id} style={sectionStyle}>
-    <h2 style={{ color: "#4CAF50" }}>{title}</h2>
+    <h2 style={{ color: "white" }}>{title}</h2>
     <p style={{ fontSize: "18px" }}>{description}</p>
     <Link to={link} style={buttonStyle}>
       Click here to see
