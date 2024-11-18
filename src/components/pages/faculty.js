@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function EntryExit() {
-    let [data, setData] = useState([]);  // Initialize as an empty array
+    let [data, setData] = useState([{}]);
 
-    const getEntries = async () => {
+    // Function to fetch entries from the backend
+    const getEntries = async (e) => {
         try {
-            let temp_data = await axios.get('http://localhost:9000/get-entry-faculty');
+            let temp_data = await axios.get('http://localhost:9000/get-entry-visitors');
             setData(temp_data.data);
             console.log(temp_data);
         } catch (error) {
@@ -14,45 +15,39 @@ function EntryExit() {
         }
     };
 
-    const handleDelete = async (item, e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post('http://localhost:9000/delete-entry-faculty', item);
-            alert("Entry deleted successfully");
-            getEntries(); // Refresh the data after deletion
-        } catch (error) {
-            console.error("Error deleting entry:", error);
-            alert("Failed to delete entry");
-        }
-    };
-
-    const rows = data.map((item) => (
-        <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>{item.id}</td>
-            <td>{item.time_of_departure}</td>
-            <td>{item.time_of_arrival}</td>
-            <td>
-                <button type="button" onClick={(e) => handleDelete(item, e)}>
-                    Delete Entry
-                </button>
-            </td>
-        </tr>
-    ));
+    // Map through the data and create rows dynamically
+    const rows = data.map((item) => {
+        console.log(item.name);
+        return (
+            <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.id}</td>
+                <td>{item.category}</td>
+                <td>{item.time_of_departure}</td> {/* Updated to Time of Departure */}
+                <td>{item.time_of_arrival}</td>
+            </tr>
+        );
+    });
 
     return (
         <div className="entry-exit-container">
             <div className="container">
+                {/* Get Entries Button */}
+                <button type="submit" onClick={getEntries}>Get Entries</button>
+
+                {/* Table to display entries */}
                 <table className="table">
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>ID</th>
-                            <th>Time of Departure</th>
+                            <th>Category</th>
+                            <th>Time of Departure</th> {/* Updated header */}
                             <th>Time of Arrival</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {/* Dynamically generated rows */}
                         {rows}
                     </tbody>
                 </table>
