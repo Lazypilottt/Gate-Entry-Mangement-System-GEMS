@@ -5,7 +5,7 @@ function EntryExit() {
     let [data, setData] = useState([{}]);
     const getEntries = async (e) => {
         try {
-            let temp_data = await axios.get('http://localhost:9000/get-entry-faculty');
+            let temp_data = await axios.get('http://localhost:9000/get-entry-support');
             //let temp_data = [{name: "Aniket", ID: "1234", category: "Student", date_of_arrival: "12", time_of_arrival: "38"}, {name: "Aniket", ID: "1234", category: "Student", date_of_arrival: "12", time_of_arrival: "38"}];
             setData(temp_data.data);
             console.log(temp_data);

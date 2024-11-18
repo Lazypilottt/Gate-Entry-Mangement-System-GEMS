@@ -14,14 +14,14 @@ function App() {
     <div className={darkMode ? "dark-mode" : ""} style={{fontFamily: "Arial, sans-serif" }}>
       <div className="container">
         <main style={darkMode ? mainDarkStyle : mainStyle}>
-          <Section id="students" title="Students" description="40 students outside" link="/students" />
+          <Section id="students" title="Students" description="40 students outside" link="/student" /> 
           <Section id="faculty" title="Faculty" description="50 faculty members logged" link="/faculty" />
-          <Section id="visitors" title="Visitors" description="10 visitors in campus" link="/visitors" />
+          <Section id="visitors" title="Visitors" description="10 visitors in campus" link="/visitor" />
           <Section
             id="supportGroups"
             title="Private Support Groups"
             description="20 private support group members in campus"
-            link="/supportGroups"
+            link="/support"
           />
         </main><br></br>
         <footer style={footerStyle}>
