@@ -83,15 +83,18 @@ body.dark-mode option {
 .container {
   width: 80%;
   margin: 0 auto;
+  background-color: gainsboro;
+  border-radius: 10px;
 }
 
 .header {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #f4f4f4;
+  border-radius: 10px;
+  background-color: gainsboro;
   text-align: center;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .logo {
