@@ -25,7 +25,7 @@ function App() {
           />
         </main><br></br>
         <footer style={footerStyle}>
-          <p>&copy; 2024 Aditya Jha, Aditya Yadav, Agastya Nath</p>
+          <p>&copy; GEMS - CSP203</p>
         </footer>
       </div>
 
