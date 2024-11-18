@@ -1,4 +1,4 @@
-# CSP203_Project1
+# Gate Entry Management System - GEMS
 Gate Entry Management System{GEMS} using MERN stack.
 
 Submitted by: Aditya Kumar Yadav  Id : 12340100\
