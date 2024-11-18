@@ -80,17 +80,18 @@ Prerequisites
     Node.js and npm installed on your machine.
 
 Installation
+
 Clone the repository:
 
-  git clone <repository_url>
+    git clone <repository_url>
 
 Navigate to the project folder:
-
-  cd <project_directory>
+ 
+    cd <project_directory>
 
 Install dependencies:
 
-   npm install
+    npm install
 Start the app:
 
     npm start
