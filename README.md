@@ -1,8 +1,8 @@
 # CSP203_Project1
 Gate Entry Management System{GEMS} using MERN stack.
 
-Submitted by Aditya Kumar Yadav  Id : 12340100
-             Agastya Nath  Id:12340140
+Submitted by: Aditya Kumar Yadav  Id : 12340100\
+             Agastya Nath  Id:12340140\
              Aditya Jha Id:12340090
 
 
