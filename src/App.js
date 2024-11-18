@@ -4,7 +4,6 @@ import logo from './components/icons/logo.jpeg';
 import Navigation from './components/navigation';
 import Home from './components/pages/home';
 import EntryExit from './components/pages/entry-exit';
-import Profile from './components/pages/profiles';
 import Logout from './components/pages/logout';
 import AdminLogin from './components/pages/admin-login';
 import Student from './components/pages/student';
@@ -32,7 +31,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/entry-exit" element={<EntryExit />} />
-                <Route path="/profile" element={<Profile />} />
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/admin-login" element={<AdminLogin />} />
                 <Route path="/student" element={<Student />} />
