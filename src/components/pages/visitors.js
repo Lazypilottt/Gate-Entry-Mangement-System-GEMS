@@ -19,7 +19,7 @@ function EntryExit() {
     const rows = data.map((item) => {
         console.log(item.name);
         return (
-            <tr key={item.id}>
+            <tr>
                 <td>{item.name}</td>
                 <td>{item.id}</td>
                 <td>{item.category}</td>

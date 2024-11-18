@@ -7,7 +7,7 @@ function EntryExit() {
     // Function to fetch entries from the backend
     const getEntries = async (e) => {
         try {
-            let temp_data = await axios.get('http://localhost:9000/get-entry-visitors');
+            let temp_data = await axios.get('http://localhost:9000/get-entry-support');
             setData(temp_data.data);
             console.log(temp_data);
         } catch (error) {
@@ -19,7 +19,7 @@ function EntryExit() {
     const rows = data.map((item) => {
         console.log(item.name);
         return (
-            <tr key={item.id}>
+            <tr>
                 <td>{item.name}</td>
                 <td>{item.id}</td>
                 <td>{item.category}</td>

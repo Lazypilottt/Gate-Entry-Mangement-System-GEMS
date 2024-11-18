@@ -13,7 +13,7 @@ router.post("/", function(req, res, next) {
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        var query_str = "INSERT INTO people VALUES ('" + req.body.name + "', " + req.body.ID + ", '" + req.body.category + "', '" + req.body.date_of_arrival + "', '" + req.body.time_of_arrival + "')";
+        var query_str = "INSERT INTO peoples VALUES ('" + req.body.name + "', " + req.body.id + ", '" + req.body.category + "', '" + req.body.time_of_departure + "', '" + req.body.time_of_arrival + "')";
         con.query(query_str, function (err, result) {
             if (err) throw err;
             console.log("Entry added");

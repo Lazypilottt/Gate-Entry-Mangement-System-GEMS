@@ -4,7 +4,7 @@ import axios from 'axios';
 function EntryExit() {
     const [formData, setFormData] = useState({
         name: '',
-        ID: '',
+        id: '',
         category: 'Student', 
         time_of_departure: '',
         time_of_arrival: '',
@@ -33,7 +33,7 @@ function EntryExit() {
             alert(response.data);
             setFormData({
                 name: '',
-                ID: '',
+                id: '',
                 category: 'Student',
                 time_of_departure: '',
                 time_of_arrival: '',
@@ -56,9 +56,9 @@ function EntryExit() {
 
     const rows = data.map((item) => {
         return (
-            <tr key={item.ID}>
+            <tr>
                 <td>{item.name}</td>
-                <td>{item.ID}</td>
+                <td>{item.id}</td>
                 <td>{item.category}</td>
                 <td>{item.time_of_departure}</td>
                 <td>{item.time_of_arrival}</td>
@@ -86,8 +86,8 @@ function EntryExit() {
                         ID No:
                         <input
                             type="text"
-                            name="ID"
-                            value={formData.ID}
+                            name="id"
+                            value={formData.id}
                             onChange={handleChange}
                         />
                     </label>

@@ -13,7 +13,7 @@ router.get("/", function(req, res, next) {
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        con.query("SELECT * FROM people WHERE category = 'Private Support Group'", function (err, result, fields) {
+        con.query("SELECT * FROM peoples WHERE category = 'Private Support Group'", function (err, result, fields) {
             if (err) throw err;
             res.send(result);
             console.log(result);

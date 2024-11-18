@@ -13,7 +13,7 @@ router.post("/", function(req, res, next) {
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        var query_str = "DELETE FROM people WHERE name = '" + req.body.name + "' and id = " + req.body.id + " and category = '" + req.body.category + "' and time_of_arrival =  '" + req.body.time_of_arrival + "'";
+        var query_str = "DELETE FROM peoples WHERE name = '" + req.body.name + "' and id = " + req.body.id + " and category = '" + req.body.category + "' and time_of_departure =  '" + req.body.time_of_departure + "' and time_of_arrival = '" + req.body.time_of_arrival + "'";
         con.query(query_str, function (err, result) {
             if (err) throw err;
             console.log("Entry deleted");

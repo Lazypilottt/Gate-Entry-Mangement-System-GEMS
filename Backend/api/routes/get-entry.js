@@ -13,7 +13,7 @@ router.get("/", function(req, res, next) {
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        con.query("SELECT * FROM people", function (err, result, fields) {
+        con.query("SELECT * FROM peoples", function (err, result, fields) {
             if (err) throw err;
             res.send(result);
             console.log(result);
