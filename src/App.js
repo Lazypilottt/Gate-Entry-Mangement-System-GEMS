@@ -21,7 +21,7 @@ function App() {
             <div className='container'>
                 <header className='header'>
                 <img src={logo} alt="logo" className="logo"/>
-                    <h1>Gate Entry Management System</h1>
+                    <h1>Gate Entry Management System - GEMS</h1>
                 </header>
             </div>
             <Navigation />
