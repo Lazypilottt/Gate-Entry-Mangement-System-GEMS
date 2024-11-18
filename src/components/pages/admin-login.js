@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-function AdminLogin() {
-    const [formData, setFormData] = useState({
-        id: '',
-        password: ''
-    });
+import { useAuth } from './AuthContext';
+function AdminLogin({ onLogin }) {
+    const [formData, setFormData] = useState({ id: '', password: '' });
     const [error, setError] = useState('');
-    const navigate = useNavigate();  // To navigate after successful login
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -16,13 +13,12 @@ function AdminLogin() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Simulating admin authentication (You can replace this with an API call)
         const { id, password } = formData;
-        if (id === 'admin' && password === 'admin123') {  // Replace with real validation
-            // Clear error and redirect to dashboard or any other page
-            setError('');
-            navigate('/dashboard');  // Redirect to a dashboard page (create this route)
+
+        if (id === 'admin' && password === 'admin123') {
+            localStorage.setItem('user', 'admin'); // Save user state
+            onLogin(); // Update the authentication state
+            navigate('/'); // Redirect to the home page
         } else {
             setError('Invalid ID or Password');
         }
