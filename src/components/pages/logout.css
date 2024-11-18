@@ -1,0 +1,169 @@
+/* logout.css */
+
+/* ==================================================
+   Logout Page Styles
+================================================== */
+.logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f9;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+  }
+  
+  body.dark-mode .logout-container {
+    background-color: #121212;
+  }
+  
+  .message-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Add space from the top */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  body.dark-mode .message-container {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .logout-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+  }
+  
+  body.dark-mode .logout-message {
+    color: #fff;
+    animation: fadeInUpDarkMode 1.5s ease-in-out forwards;
+  }
+  
+  .redirect-message {
+    font-size: 1.1rem;
+    color: #666;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
+  }
+  
+  body.dark-mode .redirect-message {
+    color: #ccc;
+    animation: fadeInUpDarkMode 1.5s ease-in-out 0.5s forwards;
+  }
+  
+  /* ==================================================
+     Animations
+  ================================================== */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Dark Mode Animations for Logout Page */
+  @keyframes fadeInUpDarkMode {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* modal.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.3s ease-in-out;
+  }
+  
+  body.dark-mode .modal-container {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .modal-button {
+    padding: 10px 20px;
+    background-color: #544A7F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode .modal-button {
+    background-color: #444;
+    color: #ccc;
+  }
+  
+  body.dark-mode .modal-button:hover {
+    background-color: #777;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

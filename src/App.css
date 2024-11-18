@@ -1,3 +1,6 @@
+/* ==================================================
+   General Styles
+================================================== */
 body {
   font-family: "Arial", sans-serif;
 }
@@ -7,6 +10,9 @@ body.dark-mode {
   color: #fff;
 }
 
+/* ==================================================
+   Dark Mode Styles
+================================================== */
 body.dark-mode .container {
   background-color: #1f1f1f;
 }
@@ -36,6 +42,9 @@ body.dark-mode option {
   color: #fff;
 }
 
+/* ==================================================
+   Dark Mode Toggle
+================================================== */
 .dark-mode-toggle {
   position: fixed;
   bottom: 20px;
@@ -80,6 +89,9 @@ body.dark-mode option {
   transform: translateX(25px);
 }
 
+/* ==================================================
+   Container
+================================================== */
 .container {
   width: 80%;
   margin: 0 auto;
@@ -87,6 +99,9 @@ body.dark-mode option {
   border-radius: 10px;
 }
 
+/* ==================================================
+   Header
+================================================== */
 .header {
   display: flex;
   align-items: center;
@@ -103,195 +118,9 @@ body.dark-mode option {
   margin-right: 10px;
 }
 
-.admin-login-container {
-  width: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-}
-
-.filter-section {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-.filter-section label {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  width: 200px;
-}
-
-.filter-section label span {
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #333;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.table th, .table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-.table th {
-  background-color: #f2f2f2;
-}
-
-button {
-  background-color: #544A7F;
-  color: #fff;
-  padding: 0px 15px;
-  font-size: 14px;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #6b5ca8;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
-}
-
-button:active {
-  background-color: #463666;
-  transform: translateY(2px);
-}
-
-select {
-  background-color: #fff;
-  color: #333;
-  font-size: 14px;
-  padding: 8px 12px;
-  border: 2px solid #544A7F;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-select:focus {
-  outline: none;
-  border-color: #6b5ca8;
-  box-shadow: 0 0 5px rgba(107, 92, 168, 0.5);
-}
-
-select:hover {
-  background-color: #f4f4f4;
-}
-
-input[type="text"], input[type="datetime-local"], select {
-  background-color: #fff;
-  color: #333;
-  font-size: 14px;
-  padding: 8px 12px;
-  border: 2px solid #544A7F;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-input[type="text"]:focus, input[type="datetime-local"]:focus, select:focus {
-  outline: none;
-  border-color: #6b5ca8;
-  box-shadow: 0 0 5px rgba(107, 92, 168, 0.5);
-}
-
-input[type="text"]:hover, input[type="datetime-local"]:hover, select:hover {
-  background-color: #f4f4f4;
-}
-
-option {
-  padding: 10px;
-  background-color: #fff;
-  color: #333;
-}
-
-option:hover {
-  background-color: #e2e2e2;
-}
-
-input[type="datetime-local"] {
-  cursor: pointer;
-}
-
-body.dark-mode .container {
-  background-color: #1f1f1f;
-  color: #fff;
-}
-
-body.dark-mode .header {
-  background-color: #333;
-}
-
-body.dark-mode .table th, body.dark-mode .table td {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-mode button {
-  background-color: #444;
-  color: #fff;
-}
-
-body.dark-mode select, body.dark-mode input[type="text"], body.dark-mode input[type="datetime-local"] {
-  background-color: #333;
-  color: #fff;
-  border-color: #6b5ca8;
-}
-
-body.dark-mode option {
-  background-color: #333;
-  color: #fff;
-}
-
-.profile-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
-
-.profile-container input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 300px;
-}
-
-.profile-details {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.profile-details p {
-  font-size: 1.1rem;
-  margin: 5px 0;
-}
-
-.error {
-  color: red;
-}
-
-
-/*admin login*/
-/* Admin Login Styles */
+/* ==================================================
+   Admin Login Page
+================================================== */
 .admin-login-container {
   width: 100%;
   max-width: 400px;
@@ -365,15 +194,178 @@ body.dark-mode option {
   margin-top: 15px;
 }
 
+/* ==================================================
+   Filter Section
+================================================== */
+.filter-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
 
-/*logout page*/
-/* Logout Page Styles */
+.filter-section label {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 200px;
+}
+
+.filter-section label span {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ==================================================
+   Table
+================================================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+/* ==================================================
+   Buttons
+================================================== */
+button {
+  background-color: #544A7F;
+  color: #fff;
+  padding: 0px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #6b5ca8;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #463666;
+  transform: translateY(2px);
+}
+
+/* ==================================================
+   Select and Input Fields
+================================================== */
+select {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 2px solid #544A7F;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select:focus {
+  outline: none;
+  border-color: #6b5ca8;
+  box-shadow: 0 0 5px rgba(107, 92, 168, 0.5);
+}
+
+select:hover {
+  background-color: #f4f4f4;
+}
+
+input[type="text"], input[type="datetime-local"] {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 2px solid #544A7F;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: #6b5ca8;
+  box-shadow: 0 0 5px rgba(107, 92, 168, 0.5);
+}
+
+input[type="text"]:hover, input[type="datetime-local"]:hover {
+  background-color: #f4f4f4;
+}
+
+option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+option:hover {
+  background-color: #e2e2e2;
+}
+
+/* ==================================================
+   Profile Section
+================================================== */
+.profile-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-container input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 300px;
+}
+
+.profile-details {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.profile-details p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+/* ==================================================
+   Logout Page
+================================================== */
+/* ==================================================
+   Logout Page
+================================================== */
 .logout-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f4f4f9;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Dark mode styles for logout container */
+body.dark-mode .logout-container {
+  background-color: #121212;
   animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -387,6 +379,13 @@ body.dark-mode option {
   animation: slideUp 1s ease-out;
 }
 
+/* Dark mode styles for the message container */
+body.dark-mode .message-container {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 .logout-message {
   font-size: 2rem;
   font-weight: bold;
@@ -396,40 +395,118 @@ body.dark-mode option {
   animation: fadeInUp 1.5s ease-in-out forwards;
 }
 
+/* Dark mode styles for logout message */
+body.dark-mode .logout-message {
+  color: #fff;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
 .redirect-message {
   font-size: 1.1rem;
   color: #666;
   opacity: 0;
-  animation: fadeInUp 1.5s ease-in-out 0.5s forwards; /* Delay to appear after the main message */
+  animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
 }
 
+/* Dark mode styles for redirect message */
+body.dark-mode .redirect-message {
+  color: #ccc;
+  animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
+}
+
+/* ==================================================
+   Animations
+================================================== */
 @keyframes fadeIn {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes slideUp {
   0% {
-      transform: translateY(20px);
-      opacity: 0;
+    transform: translateY(20px);
+    opacity: 0;
   }
   100% {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes fadeInUp {
   0% {
-      opacity: 0;
-      transform: translateY(10px);
+    opacity: 0;
+    transform: translateY(10px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* ==================================================
+   Dark Mode Animations for Logout Page
+================================================== */
+body.dark-mode .logout-container {
+  animation: fadeInDarkMode 1.5s ease-in-out;
+}
+
+body.dark-mode .message-container {
+  animation: slideUpDarkMode 1s ease-out;
+}
+
+body.dark-mode .logout-message {
+  animation: fadeInUpDarkMode 1.5s ease-in-out forwards;
+}
+
+body.dark-mode .redirect-message {
+  animation: fadeInUpDarkMode 1.5s ease-in-out 0.5s forwards;
+}
+
+/* Dark mode-specific animations */
+@keyframes fadeInDarkMode {
+  0% {
+    opacity: 0;
+    background-color: #121212;
+  }
+  100% {
+    opacity: 1;
+    background-color: #121212;
+  }
+}
+
+@keyframes slideUpDarkMode {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+    background-color: #333;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    background-color: #333;
+  }
+}
+
+@keyframes fadeInUpDarkMode {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==================================================
+   Error Messages
+================================================== */
+.error {
+  color: red;
 }

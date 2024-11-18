@@ -40,5 +40,9 @@ function App() {
             </Routes>
         </Router>
     );
+    <div className="dark-mode-toggle">
+  <input type="checkbox" id="darkModeToggle" className="dark-mode-checkbox" />
+  <label htmlFor="darkModeToggle" className="slider"></label>
+</div>
 }
 export default App;
